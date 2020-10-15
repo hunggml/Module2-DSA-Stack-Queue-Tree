@@ -18,19 +18,19 @@ class Queue
         return empty($this->queue);
     }
 
-    public function push($item)
+    public function add($item)
     {
         if (count($this->queue) < $this->next) {
             array_unshift($this->queue, $item);
         } else {
-            echo "Queue is Full";
+            echo "queue is Full";
         }
     }
 
     public function pop()
     {
         if ($this->isEmpty()) {
-            echo "Queue is empty";
+            echo "queue is empty";
         } else {
             array_pop($this->queue);
         }
